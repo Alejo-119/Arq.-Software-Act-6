@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Biblioteca</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Biblioteca</h1>
+        <section>
+            <h2>Registrar Usuario</h2>
+            <form id="registerUserForm">
+                <input type="text" id="userId" placeholder="ID Usuario" required>
+                <input type="text" id="userName" placeholder="Nombre" required>
+                <input type="password" id="userPassword" placeholder="Contraseña" required>
+                <input type="email" id="userEmail" placeholder="Email" required>
+                <button type="submit">Registrar Usuario</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Agregar Libro</h2>
+            <form id="addBookForm">
+                <input type="text" id="bookId" placeholder="ID Libro" required>
+                <input type="text" id="bookAuthor" placeholder="Autor" required>
+                <input type="text" id="bookTitle" placeholder="Título" required>
+                <input type="text" id="bookPublisher" placeholder="Editorial" required>
+                <select id="bookAvailable" required>
+                    <option value="true">Disponible</option>
+                    <option value="false">No Disponible</option>
+                </select>
+                <button type="submit">Agregar Libro</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Registrar Préstamo</h2>
+            <form id="loanForm">
+                <input type="text" id="loanId" placeholder="ID Préstamo" required>
+                <input type="text" id="loanBookId" placeholder="ID Libro" required>
+                <input type="text" id="loanUserId" placeholder="ID Usuario" required>
+                <input type="date" id="loanDate" required>
+                <input type="date" id="returnDate" required>
+                <button type="submit">Registrar Préstamo</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Libros Disponibles</h2>
+            <button id="fetchAvailableBooks">Obtener Libros Disponibles</button>
+            <ul id="availableBooksList"></ul>
+        </section>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
